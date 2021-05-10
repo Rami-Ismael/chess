@@ -5,8 +5,8 @@ class Pond(Piece):
         self.relative_position
         #white will alway be on the bottom 
         if color=="white":
-            self.relativev_positive = 1
+            self.relative_position = 1
         else :
-            self.relativev_positive = -1
+            self.relative_position = -1
     def movement(self):
         return self.pond_moves[0]
