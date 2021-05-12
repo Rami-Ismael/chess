@@ -1,3 +1,6 @@
+
+import pygame
+from ..constant import BLACK_PAWN
 class Pond(Piece):
     def __inti__(self,color,row_position,column_position):
         super().__init__(color,row_position,column_position)
@@ -8,5 +11,8 @@ class Pond(Piece):
             self.relative_position = 1
         else :
             self.relative_position = -1
+        self.calc_poss()
     def movement(self):
         return self.pond_moves[0]
+    def draw(self,screen):
+        screen.blit(BLACK_PAWN,self.x,self.y)
