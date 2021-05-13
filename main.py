@@ -6,7 +6,7 @@ from chess.constant import WIDTH,HEIGHT
 
 FPS = 60
 
-screen = pygame.display.set_mode((WIDTH,HEIGHT))
+win = pygame.display.set_mode((WIDTH,HEIGHT))
 pygame.display.set_caption("Chess")
 
 def main():
@@ -22,6 +22,6 @@ def main():
             
             if event.type == pygame.MOUSEBUTTONDOWN:
                 pass
-        board.draw_square(screen)
+        board.draw(win)
         pygame.display.update()
 main()

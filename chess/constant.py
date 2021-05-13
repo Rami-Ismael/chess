@@ -15,5 +15,5 @@ LIGHT_BROWN = (224,139,62)
 BRIGHT_WHITE = (251,241,231)
 
 ## piece
-BLACK_PAWN_PATH = "./assets/black_pawn.png"
-BLACK_PAWN = pygame.transform.scale(pygame.image.load(BLACK_PAWN_PATH),(SQUARE_SIZE/SQUARE_SIZE))
+BLACK_PAWN_PATH = "/home/rami/code/chess/chess/piece/assets/black_pawn.png"
+BLACK_PAWN = pygame.transform.scale(pygame.image.load(BLACK_PAWN_PATH),(SQUARE_SIZE,SQUARE_SIZE))
