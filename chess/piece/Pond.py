@@ -16,7 +16,4 @@ class Pond(Piece):
     def movement(self):
         return self.pond_moves[0]
     def draw(self,screen):
-        print(self.x)
-        print(self.y)
-        print(BLACK_PAWN)
         screen.blit(BLACK_PAWN,(self.x,self.y))
