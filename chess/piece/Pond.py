@@ -18,4 +18,5 @@ class Pond(Piece):
     def draw(self,screen):
         print(self.x)
         print(self.y)
+        print(BLACK_PAWN)
         screen.blit(BLACK_PAWN,(self.x,self.y))

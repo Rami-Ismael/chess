@@ -15,8 +15,8 @@ class Piece(ABC):
         pass
     #caculate the position of the x and y on the screen . 
     def calc_pos(self):
-        self.x = SQUARE_SIZE * self.col + SQUARE_SIZE//2
-        self.y = SQUARE_SIZE * self.row + SQUARE_SIZE//2
+        self.x = SQUARE_SIZE * self.col  
+        self.y = SQUARE_SIZE * self.row  
     @abstractmethod
     def draw(self,screen):
         return
