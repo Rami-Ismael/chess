@@ -1,8 +1,8 @@
 
 import pygame
-from ..constant import BLACK_PAWN, WHITE_PAWN
+from ..constant import WHITE_ROOK, BLACK_ROOK
 from .Piece import Piece
-class Pond(Piece):
+class Rook(Piece):
     def __inti__(self,color,row_position,column_position):
         super().__init__(color,row_position,column_position)
         self.piece_name = "pond"
@@ -18,6 +18,6 @@ class Pond(Piece):
         return self.pond_moves[0]
     def draw(self,screen):
         if self.color =="white":
-            screen.blit(WHITE_PAWN,(self.x,self.y)) 
+            screen.blit(WHITE_ROCK,(self.x,self.y)) 
         else:
-            screen.blit(BLACK_PAWN,(self.x,self.y))
+            screen.blit(BLACK_ROCK,(self.x,self.y))

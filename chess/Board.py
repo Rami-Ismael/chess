@@ -1,6 +1,7 @@
 import pygame
 from .constant import BRIGHT_WHITE,ROWS,COLS,LIGHT_BROWN,SQUARE_SIZE
 from .piece.Pond import Pond
+from .piece.Rook import Rook
 WHITE_SECTION = "white"
 BLACK_SECTION = "black"
 class Board:
@@ -19,6 +20,10 @@ class Board:
             for col in range( COLS):
                if row==1 :
                     self.board[row].append(Pond(WHITE_SECTION,row,col))
+               elif row==0 and (col==0 or col==7):
+                    self.board[row].append(Rook(WHITE_SECTION,row,col))
+               elif row==0 and(col==1 or  col==6):
+                   self.board[row].append()
                else:
                    self.board[row].append(0)
     def get_piece(self,row,col):
@@ -29,8 +34,5 @@ class Board:
         for row in range (ROWS):
             for col in range(COLS):
                 if self.board[row][col] != 0:
-                    piece = self.get_piece(row,col)
-                    print(piece.x)
-                    print(piece.y)
                     self.board[row][col].draw(win)
         
