@@ -3,6 +3,7 @@ from .constant import BRIGHT_WHITE,ROWS,COLS,LIGHT_BROWN,SQUARE_SIZE
 from .piece.Pond import Pond
 from .piece.Rook import Rook
 from .piece.Bishop import Bishop
+from .piece.Knight import Knight
 WHITE_SECTION = "white"
 BLACK_SECTION = "black"
 class Board:
@@ -24,6 +25,8 @@ class Board:
                elif row==0 and (col==0 or col==7):
                     self.board[row].append(Rook(WHITE_SECTION,row,col))
                elif row==0 and (col==1 or col==6):
+                   self.board[row].append(Knight(WHITE_SECTION,row,col))
+               elif row==0 and (col==2 or col==5):
                    self.board[row].append(Bishop(WHITE_SECTION,row,col))
                else:
                    self.board[row].append(0)
