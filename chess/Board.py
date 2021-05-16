@@ -4,6 +4,8 @@ from .piece.Pond import Pond
 from .piece.Rook import Rook
 from .piece.Bishop import Bishop
 from .piece.Knight import Knight
+from .piece.Queen import Queen
+from .piece.King import King
 WHITE_SECTION = "white"
 BLACK_SECTION = "black"
 class Board:
@@ -28,6 +30,10 @@ class Board:
                    self.board[row].append(Knight(WHITE_SECTION,row,col))
                elif row==7 and (col==2 or col==5):
                    self.board[row].append(Bishop(WHITE_SECTION,row,col))
+               elif row==7 and col==3:
+                   self.board[row].append(Queen(WHITE_SECTION,row,col))
+               elif row==7 and col==4:
+                   self.board[row].append(King(WHITE_SECTION,row,col))
                else:
                    self.board[row].append(0)
     def get_piece(self,row,col):
