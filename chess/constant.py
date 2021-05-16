@@ -18,7 +18,7 @@ BRIGHT_WHITE = (251,241,231)
 BLACK_PAWN_PATH = "/home/rami/code/chess/chess/piece/assets/black_pawn.png"
 WHITE_PAWN_PATH = "/home/rami/code/chess/chess/piece/assets/white_pawn.png"
 BLACK_PAWN = pygame.transform.scale(pygame.image.load(BLACK_PAWN_PATH),(SQUARE_SIZE,SQUARE_SIZE))
-WHITE_PAWN = pygame.transform.scale(pygame.image.load(BLACK_PAWN_PATH),(SQUARE_SIZE,SQUARE_SIZE))
+WHITE_PAWN = pygame.transform.scale(pygame.image.load(WHITE_PAWN_PATH),(SQUARE_SIZE,SQUARE_SIZE))
 
 ## rook 
 WHITE_ROOK_PATH = "/home/rami/code/chess/chess/piece/assets/white_rook.png"

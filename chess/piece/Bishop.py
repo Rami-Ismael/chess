@@ -1,8 +1,8 @@
-
 import pygame
-from ..constant import WHITE_ROOK, BLACK_ROOK
+from ..constant import WHITE_BISHOP, BLACK_BISHOP
 from .Piece import Piece
-class Rook(Piece):
+
+class Bishop(Piece):
     def __inti__(self,color,row_position,column_position):
         super().__init__(color,row_position,column_position)
         self.pond_moves=[(1,0)]
@@ -17,6 +17,6 @@ class Rook(Piece):
         return self.pond_moves[0]
     def draw(self,screen):
         if self.color =="white":
-            screen.blit(WHITE_ROOK,(self.x,self.y)) 
+            screen.blit(WHITE_BISHOP,(self.x,self.y)) 
         else:
-            screen.blit(BLACK_ROCK,(self.x,self.y))
+            screen.blit(BLACK_BISHOP,(self.x,self.y))
