@@ -19,4 +19,4 @@ class King(Piece):
         if self.color =="white":
             screen.blit(WHITE_KING,(self.x,self.y)) 
         else:
-            screen.blit(BLACK_KING,(sef.y))
+            screen.blit(BLACK_KING,(self.x,self.y))

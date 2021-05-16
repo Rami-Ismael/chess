@@ -19,4 +19,4 @@ class Rook(Piece):
         if self.color =="white":
             screen.blit(WHITE_ROOK,(self.x,self.y)) 
         else:
-            screen.blit(BLACK_ROCK,(self.x,self.y))
+            screen.blit(BLACK_ROOK,(self.x,self.y))

@@ -34,6 +34,18 @@ class Board:
                    self.board[row].append(Queen(WHITE_SECTION,row,col))
                elif row==7 and col==4:
                    self.board[row].append(King(WHITE_SECTION,row,col))
+               elif row==1:
+                    self.board[row].append(Pond(BLACK_SECTION,row,col))
+               elif row==0 and (col==0 or col==7):
+                    self.board[row].append(Rook(BLACK_SECTION,row,col))
+               elif row==0 and (col==1 or col==6):
+                   self.board[row].append(Knight(BLACK_SECTION,row,col))
+               elif row==0 and (col==2 or col==5):
+                   self.board[row].append(Bishop(BLACK_SECTION,row,col))
+               elif row==0 and col==3:
+                   self.board[row].append(Queen(BLACK_SECTION,row,col))
+               elif row==0 and col==4:
+                   self.board[row].append(King(BLACK_SECTION,row,col))
                else:
                    self.board[row].append(0)
     def get_piece(self,row,col):
