@@ -2,7 +2,7 @@
 
 import pygame
 from chess.Board import Board
-from chess.constant import WIDTH,HEIGHT
+from chess.constant import WIDTH,HEIGHT, SQUARE_SIZE
 from chess.game import Game
 
 FPS = 60
