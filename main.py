@@ -19,6 +19,7 @@ def main():
     run = True
     clock = pygame.time.Clock()
     game = Game(win)
+    game.draw()
     while run:
         clock.tick(FPS)
         for event in pygame.event.get():
@@ -28,7 +29,5 @@ def main():
             if event.type == pygame.MOUSEBUTTONDOWN:
                 pos = pygame.mouse.get_pos()
                 row,col = get_row_col_from_mouse(pos)
-
-        board.draw(win)
         pygame.display.update()
 main()

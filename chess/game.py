@@ -1,5 +1,7 @@
 from .Board import Board
 class Game():
     def __init__(self,win):
-        boad = Board()
+        self.board = Board()
         self.win = win
+    def draw(self):
+        self.board.draw(self.win)
