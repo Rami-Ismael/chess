@@ -11,7 +11,7 @@ class Piece(ABC):
         self.y=0
         self.calc_pos()
     @abstractmethod
-    def movement(self):
+    def movement(self,board):
         pass
     #caculate the position of the x and y on the screen . 
     def calc_pos(self):

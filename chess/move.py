@@ -1,3 +1,10 @@
 
 class move:
-    def __init__(self,current_row,current_col,future_row,future_col,piece,took_a_piece,):
+    def __init__(self,current_row,current_col,future_row,future_col,piece,took_a_piece,piece_taken):
+        self.current_row = current_row
+        self.current_col = current_col
+        self.future_row = future_row
+        self.future_col = future_col
+        self.piece = piece
+        self.took_a_peice = took_a_piece
+        self.piece_token  = piece_token

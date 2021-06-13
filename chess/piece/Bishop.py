@@ -5,16 +5,14 @@ from .Piece import Piece
 class Bishop(Piece):
     def __inti__(self,color,row_position,column_position):
         super().__init__(color,row_position,column_position)
-        self.pond_moves=[(1,0)]
-        self.relative_position
-        #white will alway be on the bottom 
-        if color=="white":
-            self.relative_position = 1
-        else :
-            self.relative_position = -1
+        self.pond_moves=[(1,1)(2,2),(3,3),(4,4)(5,5),(6,6)(7,7)(8,8)]
         self.calc_poss()
     def movement(self):
-        return self.pond_moves[0]
+        for row_direction in(1,-1):
+            for col_direction in (1,-1):
+                blocking = True
+                for vector in pond_moves:
+                    
     def draw(self,screen):
         if self.color =="white":
             screen.blit(WHITE_BISHOP,(self.x,self.y)) 
