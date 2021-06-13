@@ -24,8 +24,7 @@ def main():
         clock.tick(FPS)
         for event in pygame.event.get():
             if event.type ==pygame.QUIT:
-                run = False
-            
+                run = False 
             if event.type == pygame.MOUSEBUTTONDOWN:
                 pos = pygame.mouse.get_pos()
                 row,col = get_row_col_from_mouse(pos)

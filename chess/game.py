@@ -5,3 +5,9 @@ class Game():
         self.win = win
     def draw(self):
         self.board.draw(self.win)
+    def check_if_king(self,board,color):
+        return True
+    def turn(self,turn):
+        #turn is just a color
+        #get the list of valid move for the opposting playe
+        return False
