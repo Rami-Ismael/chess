@@ -12,7 +12,7 @@ class Piece(ABC):
         self.calc_pos()
     @abstractmethod
     def movement(self,board):
-        pass
+       return  
     #caculate the position of the x and y on the screen . 
     def calc_pos(self):
         self.x = SQUARE_SIZE * self.col  
