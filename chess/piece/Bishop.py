@@ -18,9 +18,10 @@ class Bishop(Piece):
                     if(dr<8 and dr >=0 and dc >=0 and dc<8)
                         if(board[dr][dc]==0)
                             valid_moves.append((dc,dr))
-                        else:
+                    else:
                             valid_moves.append((dc,dr))
                             blocking = False
+        return valid_moves
 
     def draw(self,screen):
         if self.color =="white":
