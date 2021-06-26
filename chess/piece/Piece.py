@@ -9,6 +9,10 @@ class Piece(ABC):
         self.col = column_position
         self.x=0
         self.y=0
+        if color=="white":
+            self.interger_value = 1
+        else:
+            self.interger_value=-1
         self.calc_pos()
     @abstractmethod
     def movement(self,board):

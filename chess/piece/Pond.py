@@ -10,15 +10,16 @@ class Pond(Piece):
         self.relative_position
         #white will alway be on the bottom 
         if color=="white":
-            self.relative_position = 1
+            self.r
         else :
             self.relative_position = -1
         self.calc_poss()
     def movement(self):
         move = []
+        move.append(move((self.col,self.row,self.col,self.row+1*self.interger_value,self.col,self.interger_value*1,False,0)))
         if(self.first_turn):
-            move.append([(self.col,self.row+1),(self.col,self.row+2)])
-        return move.append([(self.col,self.row+1)
+            move.append(move((self.col,self.row,self.col,self.row+2*self.interger_value,self.col,self.interger_value*1,False,0)))
+        return move
     def draw(self,screen):
         if self.color =="white":
             screen.blit(WHITE_PAWN,(self.x,self.y)) 
