@@ -13,10 +13,10 @@ class Bishop(Piece):
             for col_direction in (1,-1):
                 blocking = True
                 for vector in pond_moves and blocking:
-                    dr = self..row+vector[1]*row_direction
+                    dr = self.row+vector[1]*row_direction
                     dc = self.col + vector[0]*col_direction
-                    if(dr<8 and dr >=0 and dc >=0 and dc<8)
-                        if(board[dr][dc]==0)
+                    if(dr<8 and dr >=0 and dc >=0 and dc<8):
+                        if board[dr][dc]==0 :
                             valid_moves.append((dc,dr))
                     else:
                             valid_moves.append((dc,dr))
