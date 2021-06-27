@@ -14,7 +14,7 @@ class Queen(Piece):
             self.relative_position = -1
         self.calc_poss()
     def movement(self):
-        return self.pond_moves[0]
+        return []
     def draw(self,screen):
         if self.color =="white":
             screen.blit(WHITE_QUEEN,(self.x,self.y)) 

@@ -10,14 +10,14 @@ class King(Piece):
         self.calc_poss()
     def movement(self,board):
         valid_move = []
-        for vetor in king_moves:
-            dr = self.row+vector[1]
-            dc = self.col+vector[0]
+        for vector in king_moves:
+            dr = self.row+vector[1][1]
+            dc = self.col+vector[0][0]
             if(dr>=0 and dr<8 and dc>=0 and dc<8):
                 if(board[dr][dc]==0):
-                    valid_moves.append(move(self.row,self.col,dr,dc,"King",False,null))
+                    valid_move.append(move(self.row,self.col,dr,dc,"King",False,0))
                 elif board[dr][dc].color!=self.color:
-                    valid_moves.append(move(self.row,self.col,dr,dc,"King",True,))
+                    valid_move.append(move(self.row,self.col,dr,dc,"King",True,0))
                     
                     
         return self.pond_moves[0]

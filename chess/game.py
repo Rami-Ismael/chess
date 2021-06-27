@@ -17,12 +17,35 @@ class Game():
         self.board.draw(self.win)
     def check_if_king(self,board,color):
         return False
-    def turn(self,turn):
+    def valid_moves(self,turn):
+        valid_moves = []
         #turn is just a color
         #get the list of valid move for the opposting playe
         if turn=="white" :
-            for
+            for x in self.white_pieces:
+                valid_moves+=x.movement()
+        else:
+            for x in self.white_pieces:
+                valid_moves+=x.movement()
+        
+        return valid_moves
+    def select_move(self,row,col,piece):
+        valid_moves = self.valid_moves
+        for x in valid_moves:
+            if x.integer_values ==piece.integer_value:
+                if x.row ==row and x.col ==col:
+                    return True
         return False
+    def there_is_piece(self,row,col):
+        if self.board[row][col] !=0:
+            return True
+        return  False
+    def return_color(self,row,col):
+        if self.board[row][col]!=0:
+            return self.board[row][col].color
+        return 
+    def return_peice(self,row,col):
+        return self.board[row][col]
     def update(self):
         self.board.draw(self.win)
         pygame.display.update()

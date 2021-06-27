@@ -2,6 +2,7 @@
 import pygame
 from ..constant import BLACK_PAWN, WHITE_PAWN
 from .Piece import Piece
+from .pieces import pieces
 class Pond(Piece):
     def __inti__(self,color,row_position,column_position):
         super().__init__(color,row_position,column_position)
