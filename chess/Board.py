@@ -22,29 +22,29 @@ class Board:
         for row in range(ROWS):
             self.board.append([])
             for col in range( COLS):
-               if row==6 :
+               if row==1:
                     self.board[row].append(Pond(WHITE_SECTION,row,col))
-               elif row==7 and (col==0 or col==7):
-                    self.board[row].append(Rook(WHITE_SECTION,row,col))
-               elif row==7 and (col==1 or col==6):
-                   self.board[row].append(Knight(WHITE_SECTION,row,col))
-               elif row==7 and (col==2 or col==5):
-                   self.board[row].append(Bishop(WHITE_SECTION,row,col))
-               elif row==7 and col==3:
-                   self.board[row].append(Queen(WHITE_SECTION,row,col))
-               elif row==7 and col==4:
-                   self.board[row].append(King(WHITE_SECTION,row,col))
-               elif row==1:
-                    self.board[row].append(Pond(BLACK_SECTION,row,col))
                elif row==0 and (col==0 or col==7):
-                    self.board[row].append(Rook(BLACK_SECTION,row,col))
+                    self.board[row].append(Rook(WHITE_SECTION,row,col))
                elif row==0 and (col==1 or col==6):
-                   self.board[row].append(Knight(BLACK_SECTION,row,col))
+                   self.board[row].append(Knight(WHITE_SECTION,row,col))
                elif row==0 and (col==2 or col==5):
-                   self.board[row].append(Bishop(BLACK_SECTION,row,col))
+                   self.board[row].append(Bishop(WHITE_SECTION,row,col))
                elif row==0 and col==3:
-                   self.board[row].append(Queen(BLACK_SECTION,row,col))
+                   self.board[row].append(Queen(WHITE_SECTION,row,col))
                elif row==0 and col==4:
+                   self.board[row].append(King(WHITE_SECTION,row,col))
+               elif row==6:
+                    self.board[row].append(Pond(BLACK_SECTION,row,col))
+               elif row==7 and (col==0 or col==7):
+                    self.board[row].append(Rook(BLACK_SECTION,row,col))
+               elif row==7 and (col==1 or col==6):
+                   self.board[row].append(Knight(BLACK_SECTION,row,col))
+               elif row==7 and (col==2 or col==5):
+                   self.board[row].append(Bishop(BLACK_SECTION,row,col))
+               elif row==7 and col==3:
+                   self.board[row].append(Queen(BLACK_SECTION,row,col))
+               elif row==7 and col==4:
                    self.board[row].append(King(BLACK_SECTION,row,col))
                else:
                    self.board[row].append(0)
