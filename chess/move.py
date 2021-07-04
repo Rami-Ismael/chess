@@ -7,5 +7,5 @@ class move:
         self.future_row = future_row
         self.future_col = future_col
         self.piece = pieces(piece)
-        self.took_a_peice = took_a_piece
-        self.piece_token  = piece(piece_token)
+        self.took_a_piece = took_a_piece
+        self.piece_taken  = 0

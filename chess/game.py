@@ -17,8 +17,7 @@ class Game():
                 if self.board.board[row][col] !=0:
                     if self.board.board[row][col].color == "white":
                         print("action")
-                        print(self.board.board[row][col].movement())
-                        valid_moves+=self.board.board[row][col].movement()
+                        valid_moves+=self.board.board[row][col].movement(self.board.board)
         return valid_moves
     def select_move(self,row,col,piece,turn):
         valid_moves = self.valid_moves(turn)
