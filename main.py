@@ -33,6 +33,9 @@ def main():
                     if game.there_is_piece(row,col):
                         if game.return_color(row,col)==turn:
                             piece_selected.append(game.return_peice(row,col))
+                    else:
+                        if(game.select_move(row,col,piece_selected[0])):
+                            update()
                         
         game.update()
 main()

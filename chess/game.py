@@ -32,10 +32,17 @@ class Game():
     def select_move(self,row,col,piece):
         valid_moves = self.valid_moves
         for x in valid_moves:
-            if x.integer_values ==piece.integer_value:
+            if x.piece==piece.integer_value:
                 if x.row ==row and x.col ==col:
                     return True
         return False
+    def return_move(self,row,col,piece):
+        valid_moves = self.valid_moves
+        for x in valid_moves:
+            if x.piece==piece.integer_value:
+                if x.row ==row and x.col ==col:
+                    return x
+        return 
     def there_is_piece(self,row,col):
         if self.board[row][col] !=0:
             return True
@@ -46,6 +53,7 @@ class Game():
         return 
     def return_peice(self,row,col):
         return self.board[row][col]
+    def update_board(self,row,col):
     def update(self):
         self.board.draw(self.win)
         pygame.display.update()
