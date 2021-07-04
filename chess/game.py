@@ -6,30 +6,19 @@ class Game():
         self.win = win
         self.white_pieces = []
         self.black_peice = []
-        for x in self.board.board:
-            if(x!=0):
-                if(x.color=="white"):
-                    white_pieces.append(x)
-                else:
-                    black_peice.append(x)
-            
     def draw(self):
         self.board.draw(self.win)
     def check_if_king(self,board,color):
         return False
     def valid_moves(self,turn):
         valid_moves = []
-        #turn is just a color
-        #get the list of valid move for the opposting playe
-        if turn=="white":
-            print(self.white_pieces)
-            for x in self.white_pieces:
-                print(x)
-                valid_moves+=x.movement()
-        else:
-            for x in self.white_pieces:
-                valid_moves+=x.movement()
-        
+        for row in range(0,8):
+            for col in range(0,8):
+                if self.board.board[row][col] !=0:
+                    if self.board.board[row][col].color == "white":
+                        print("action")
+                        print(self.board.board[row][col].movement())
+                        valid_moves+=self.board.board[row][col].movement()
         return valid_moves
     def select_move(self,row,col,piece,turn):
         valid_moves = self.valid_moves(turn)

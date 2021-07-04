@@ -13,7 +13,7 @@ class Knight(Piece):
         else :
             self.relative_position = -1
         self.calc_poss()
-    def movement(self):
+    def movement(self,board):
         return []
     def draw(self,screen):
         if self.color =="white":

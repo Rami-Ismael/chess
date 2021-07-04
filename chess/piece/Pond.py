@@ -15,7 +15,7 @@ class Pond(Piece):
         else :
             self.relative_position = -1
         self.calc_poss()
-    def movement(self):
+    def movement(self,board):
         move = []
         move.append(move((self.col,self.row,self.col,self.row+1*self.interger_value,self.col,self.interger_value*1,False,0)))
         if(self.first_turn):
